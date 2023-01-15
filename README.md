@@ -34,4 +34,9 @@ Users should be able:
 5. Actors (first name, last name)
 6. Similar movies (title, release date)
 
-**Задание находится в процессе разработки**
+**Задание находится в процессе разработки...**
+
+## Особенности реализации
+
+- Разработка ведется в IDE VSCode с использованием Docker Dev Container (Debian);
+- Стек: Django, DjangoRestFramework;
