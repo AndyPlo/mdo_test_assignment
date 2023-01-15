@@ -21,6 +21,7 @@
 2. Rating
 3. Genre
 4. Number of actors
+
 Users should be able: 
 - to order movies by release date and rating (default ordering by rating DESC)
 - filter by genre (multiple) 
