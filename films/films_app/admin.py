@@ -15,10 +15,10 @@ class GenreAdmin(admin.ModelAdmin):
 
 @admin.register(models.Film)
 class FilmAdmin(admin.ModelAdmin):
-    list_display = ('title', 'release_date', 'rating')
-    ordering = ['title', 'release_date', 'rating']
+    list_display = ('title', 'id', 'genre', 'release_date', 'rating')
+    ordering = ['title', 'genre', 'release_date', 'rating']
 
 
 @admin.register(models.SimilarFilm)
 class SimilarFilmAdmin(admin.ModelAdmin):
-    list_display = ('film', 'similar_film')
+    list_display = ('film', 'id', 'similar_film')

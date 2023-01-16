@@ -6,4 +6,5 @@ def rating_choices():
 
 
 def year_choices():
-    return [(year, year) for year in range(1900, datetime.date.today().year+1)]
+    return [
+        (year, year) for year in range(datetime.date.today().year, 1900, -1)]

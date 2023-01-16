@@ -69,9 +69,12 @@ class Film(models.Model):
         'Рейтинг',
         choices=rating_choices()
     )
-    genre = models.ManyToManyField(
+    genre = models.ForeignKey(
         Genre,
-        verbose_name='Жанры'
+        verbose_name='Жанр',
+        related_name='films',
+        on_delete=models.SET_NULL,
+        null=True
     )
     actors = models.ManyToManyField(
         Actor,
@@ -91,13 +94,12 @@ class SimilarFilm(models.Model):
     film = models.ForeignKey(
         Film,
         on_delete=models.CASCADE,
+        related_name='similar_films',
         verbose_name='Фильм'
     )
     similar_film = models.ForeignKey(
         Film,
-        on_delete=models.SET_NULL,
-        null=True,
-        related_name='similar_film',
+        on_delete=models.CASCADE,
         verbose_name='Похожий фильм'
     )
 
