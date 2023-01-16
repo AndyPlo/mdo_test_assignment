@@ -31,7 +31,8 @@ class Actor(models.Model):
 class Genre(models.Model):
     genre = models.CharField(
         'Жанр',
-        max_length=50
+        max_length=50,
+        unique=True,
     )
     slug = models.SlugField(
         'Уникальный слаг',
@@ -44,12 +45,6 @@ class Genre(models.Model):
         ordering = ['genre']
         verbose_name = 'Жанр'
         verbose_name_plural = 'Жанры'
-        constraints = [
-            models.UniqueConstraint(
-                fields=['genre', 'slug'],
-                name='unique_genre'
-            )
-        ]
 
     def __str__(self):
         return self.genre
@@ -84,7 +79,6 @@ class Film(models.Model):
     class Meta:
         verbose_name = 'Фильм'
         verbose_name_plural = 'Фильмы'
-        ordering = ['-rating']
 
     def __str__(self):
         return self.title
