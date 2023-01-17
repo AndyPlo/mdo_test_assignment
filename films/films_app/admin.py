@@ -10,7 +10,7 @@ class ActorAdmin(admin.ModelAdmin):
 
 @admin.register(models.Genre)
 class GenreAdmin(admin.ModelAdmin):
-    list_display = ('genre', 'slug')
+    list_display = ('genre', )
 
 
 @admin.register(models.Film)

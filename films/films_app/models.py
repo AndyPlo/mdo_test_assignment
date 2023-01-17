@@ -34,12 +34,6 @@ class Genre(models.Model):
         max_length=50,
         unique=True,
     )
-    slug = models.SlugField(
-        'Уникальный слаг',
-        max_length=50,
-        unique=True,
-        null=True
-    )
 
     class Meta:
         ordering = ['genre']
