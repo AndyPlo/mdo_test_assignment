@@ -52,7 +52,7 @@ Users should be able:
 
 ## Примеры запросов
 
-Request: [GET] http://127.0.0.1:8000/films/?ordering=release_date&genre=Драма&genre=Криминальный&search=Побег
+Request: `[GET] http://127.0.0.1:8000/films/?ordering=release_date&genre=Драма&genre=Криминальный&search=Побег`
 
 Response:
 ```json
@@ -66,7 +66,7 @@ Response:
 ]
 ```
 
-Request: [GET] http://127.0.0.1:8000/films/5/
+Request: `[GET] http://127.0.0.1:8000/films/5/`
 
 Response:
 ```json
